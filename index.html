@@ -18,20 +18,15 @@
             <h3 class="text-center w-50 mx-auto">Find Your Phone:</h3>
             <div class="input-group mb-3 w-50 mx-auto">
                 <input id="input-field" type="text" class="form-control" placeholder="Enter Phone name" aria-label="Recipient's username" aria-describedby="button-addon2">
-                <button class="btn btn-outline-secondary" type="button" id="button-search">Search</button>
+                <button onclick="loadPhones()" class="btn btn-outline-secondary" type="button" id="button-search">Search</button>
               </div>
         </section>
         <section class="container m-5">
-            <div class="row row-cols-1 row-cols-md-3 g-4">
-                <div class="col">
-                  <div class="card">
-                    <img src="..." class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    </div>
-                  </div>
-                </div>
+            <div class="text-center text-danger">
+                <h3 id="empty-error">Opps! Please enter phone name....</h3>
+                <h3 id="matching-error">Opps! No reults Found....</h3>
+            </div>
+            <div id="phone-container" class="row row-cols-1 row-cols-md-3 g-4">
             </div>
         </section>
     </main>

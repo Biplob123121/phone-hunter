@@ -1,3 +1,13 @@
 span{
     color: rgb(235, 60, 16);
 }
+#empty-error, #matching-error{
+    display: none;
+}
+.details-btn{
+    background-color: indianred;
+    color: white;
+    padding: 3px 15px;
+    border-radius: 7px;
+    font-weight: 600;
+}
