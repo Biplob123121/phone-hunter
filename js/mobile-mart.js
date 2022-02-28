@@ -7,6 +7,7 @@ const loadPhones = () =>{
         document.getElementById('empty-error').style.display = 'block';
     }
     else{
+        document.getElementById('empty-error').style.display = 'none';
          fetch(`https://openapi.programming-hero.com/api/phones?search=${searchText}`)
         .then(res => res.json())
         .then(data => displayPhone(data.data));
@@ -17,7 +18,12 @@ const displayPhone = phones =>{
     //console.log(phones);
     const phoneContainer = document.getElementById('phone-container');
     phoneContainer.innerHTML = '';
-    
+    if(phones.length == 0){
+        document.getElementById('matching-error').style.display = 'block';
+    }
+    else{
+        document.getElementById('matching-error').style.display = 'none';
+    }
     for(const phone of phones){
         //console.log(phone);
         
@@ -58,6 +64,7 @@ const displayPhoneDetails = phone =>{
                 <h5 class="card-title">Release Date: ${phone.releaseDate}</h5>
                 <h5 class="card-title">Memory: ${phone.mainFeatures.memory}</h5>
                 <h5 class="card-title">Chip Set: ${phone.mainFeatures.chipSet}</h5>
+                <h5 class="card-title">Sensors: ${phone.mainFeatures.sensors}</h5>
                 <h5 class="card-title">WLAN: ${phone.others.WLAN}</h5>
                 <h5 class="card-title">Bluetooth: ${phone.others.Bluetooth}</h5>
                 <h5 class="card-title">GPS: ${phone.others.GPS}</h5>
