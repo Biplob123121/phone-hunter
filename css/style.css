@@ -11,3 +11,6 @@ span{
     border-radius: 7px;
     font-weight: 600;
 }
+#spinner{
+    display: none;
+}
