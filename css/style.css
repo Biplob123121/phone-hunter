@@ -1,7 +1,8 @@
 span{
     color: rgb(235, 60, 16);
+    font-weight: 700;
 }
-#empty-error, #matching-error{
+#empty-error, #matching-error, #spinner, #more-btn{
     display: none;
 }
 .details-btn{
@@ -10,7 +11,4 @@ span{
     padding: 3px 15px;
     border-radius: 7px;
     font-weight: 600;
-}
-#spinner{
-    display: none;
 }
